@@ -1,0 +1,28 @@
+@startuml
+:user: as user
+left to right direction
+user ->(Registration)
+user ->(Login)
+(Registration) --> (Login)
+(Login) --> (Setup profile)
+
+(Edit language and language levels).>(Setup profile):extends
+(Edit hobbies) .> (Setup profile):extends
+
+usecase selectLan as "Select language
+for current session"
+
+(Setup profile) ->selectLan
+(Login)->selectLan
+usecase findChat as "Find chat with other user/users
+configured by selected
+language and hobbies"
+selectLan -right-> findChat
+findChat -down->(Learn selected language and estimate other users)
+
+:admin: as admin
+admin -> (Admin login)
+(Admin login) ->(View user accounts and them estimates)
+(View selected user account) ..> (View user accounts and them estimates):extends
+(Block/ublock users) .> (View selected user account):include
+@enduml

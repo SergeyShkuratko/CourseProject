@@ -36,4 +36,25 @@
         <servlet-name>badLogin</servlet-name>
         <url-pattern>/badLogin</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registration</servlet-name>
+        <jsp-file>/registration.jsp</jsp-file>
+        <!--<servlet-class>servlets.LoginServlet</servlet-class>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>regNewUser</servlet-name>
+        <!--<jsp-file>/registration.jsp</jsp-file>-->
+        <servlet-class>servlets.RegistrationNewUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>regNewUser</servlet-name>
+        <url-pattern>/regNewUser</url-pattern>
+    </servlet-mapping>
+
 </web-app>

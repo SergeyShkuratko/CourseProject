@@ -1,0 +1,18 @@
+@startuml
+User -> System: Try login
+System -> Database: Check user data
+Database -> System: Answer
+System -> User:Login
+User -> System: Select language,\nlanguage skill and hobbies
+System -> Database: PersistData
+User -> System: Start chat search
+System -> System: Search interlocutor
+System-> User: Start chatting
+User -> System: Send message from user
+activate System
+activate User
+System->Database: Log chat
+System -> User: Send message from interlocutor
+deactivate System
+deactivate User
+@enduml

@@ -23,7 +23,6 @@ To change this template use File | Settings | File Templates.
 <body>
 <center>
     <h1>Login page</h1>
-    <h2>Signup Details</h2>
     <form action="${context}/loginCheck" id="loginForm" method="post">
         <%--<br/><font color="red">The Context Path is:<%=request.getContextPath()%>--%>
         <%--</font>--%>
@@ -32,7 +31,7 @@ To change this template use File | Settings | File Templates.
     </form>
     <div id="buttons">
         <div id="enterButton" class="button">Enter</div>
-        <div id="registrationButton" class="button">Registration</div>
+        <div onclick="location.href='/registration';" id="registrationButton" class="button">Registration</div>
     </div>
     <%--<a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>--%>
 </center>

@@ -1,0 +1,55 @@
+@startuml
+class User {
+     UUID id;
+     String login;
+     String password;
+     String role;
+     String email;
+     int likeCount;
+     int dislikeCount;
+     HashMap<Language, LanguageLevel> languages;
+     List<String> hobbies;
+     boolean banStatus;
+
+     getters()
+     setters()
+}
+
+class Language{
+    UUID id;
+    String name;
+         getters()
+         setters()
+}
+
+class LanguageUserConnector{
+    UUID userId;
+    UUID languageId;
+    LanguageLevel level;
+         getters()
+         setters()
+}
+
+class ChatSession{
+UUID firstUserId;
+UUID secondUserId;
+     Language sessionLanguage;
+     List<String> chatLog;
+     boolean firstUserExit = false;
+     boolean secondUserExit = false;
+     setters();
+   getters();
+}
+
+'User -- LanguageUserConnector
+'LanguageUserConnector -- Language
+'LanguageUserConnector -- LanguageLevel
+User "many" -- "many" Language
+(User, Language) . LanguageUserConnector
+note on link: Connected by\nLanguageUserConnector
+
+enum LanguageLevel {
+NATIVE
+INTERMEDIATE
+}
+@enduml

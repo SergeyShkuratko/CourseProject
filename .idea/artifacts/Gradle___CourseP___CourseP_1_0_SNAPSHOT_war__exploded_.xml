@@ -18,8 +18,9 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" />
+          <element id="library" level="project" name="Gradle: javax.servlet.jsp:jsp-api:2.1" />
           <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet.jsp/jsp-api/2.1/63f943103f250ef1f3a4d5e94d145a0f961f5316/jsp-api-2.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4.1212/38931d70811d9bfcecf9c06f7222973c038a12de/postgresql-9.4.1212.jar" />
         </element>
       </element>
     </root>

@@ -3,20 +3,19 @@
     height: 50px;
 }
 
-#enterButton {
+.button {
     cursor: pointer;
     line-height: 35px;
     display: inline-block;
-    border:1px solid red;
+    border: 1px solid red;
     height: 40px;
     width: 120px;
 }
 
+#enterButton {
+
+}
+
 #registrationButton {
-    cursor: pointer;
-    line-height: 35px;
-    display: inline-block;
-    border:1px solid red;
-    height: 40px;
-    width: 120px;
+
 }

@@ -3,7 +3,7 @@ $("#enterButton").click(function () {
 });
 
 $("#registrationButton").click(function () {
-    console.log("Registration button clicked")
+
 });
 
 
